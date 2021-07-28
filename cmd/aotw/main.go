@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"path/filepath"
 
 	"github.com/030/aotw/internal/admin"
@@ -19,6 +20,13 @@ func main() {
 		log.Fatal(err)
 	}
 	viper.AddConfigPath(filepath.Join(home, ".aotw"))
+
+	config := flag.String("config", "", "the file path that contains the configuration")
+	flag.Parse()
+	if *config != "" {
+		viper.SetConfigFile(*config)
+	}
+
 	if err := viper.ReadInConfig(); err != nil {
 		log.Fatalf("Fatal error config file: %w", err)
 	}

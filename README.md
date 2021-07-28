@@ -43,6 +43,6 @@ chmod 0600 ~/.aotw/config.yml
 
 ```bash
 docker run \
-    -v /home/${USER}/.aotw/:/home/aotw/.aotw/ utrecht/aotw:0.1.0 \
-    aotw --config /home/aotw/.aotw/config.yml
+    -v /home/${USER}/.aotw/:/home/aotw/.aotw/ utrecht/aotw:0.1.1 \
+    aotw -config /home/aotw/.aotw/config.yml
 ```
