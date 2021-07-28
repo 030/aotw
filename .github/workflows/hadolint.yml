@@ -1,4 +1,4 @@
-name: "Dockle"
+name: "Hadolint"
 on: [push]
 jobs:
   dive:
