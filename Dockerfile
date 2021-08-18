@@ -12,7 +12,7 @@ RUN apk add --no-cache \
     chmod +x user.sh && \
     ./user.sh
 
-FROM alpine:3.14.0
+FROM alpine:3.14.1
 ENV BIN=/usr/local/bin/
 ENV USERNAME=aotw
 ENV BASE=/opt/${USERNAME}
